@@ -21,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         val buttonDecrementer =
             findViewById<Button>(R.id.buttonDecrementer)
 
+        val buttonPlus5 =
+            findViewById<Button>(R.id.buttonPlus5)
+
+        val buttonMoins5 =
+            findViewById<Button>(R.id.buttonMoins5)
+
         val buttonReinitialiser =
             findViewById<Button>(R.id.buttonReinitialiser)
 
@@ -31,6 +37,16 @@ class MainActivity : AppCompatActivity() {
 
         buttonDecrementer.setOnClickListener {
             compteur--
+            textViewCompteur.text = compteur.toString()
+        }
+
+        buttonPlus5.setOnClickListener {
+            compteur += 5
+            textViewCompteur.text = compteur.toString()
+        }
+
+        buttonMoins5.setOnClickListener {
+            compteur -= 5
             textViewCompteur.text = compteur.toString()
         }
 

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titre_compteur"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewCompteur"
@@ -27,8 +27,8 @@
         android:id="@+id/buttonIncrementer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bouton_plus"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/bouton_plus" />
 
     <Button
         android:id="@+id/buttonDecrementer"
@@ -41,7 +41,22 @@
         android:id="@+id/buttonReinitialiser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bouton_reinitialiser"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/bouton_reinitialiser" />
+
+
+    <Button
+        android:id="@+id/buttonPlus5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="+5" />
+
+    <Button
+        android:id="@+id/buttonMoins5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="-5" />
 
 </LinearLayout>
