@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textViewTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titre_compteur"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/textViewCompteur"
@@ -21,42 +28,70 @@
         android:layout_height="wrap_content"
         android:text="@string/valeur_compteur"
         android:textSize="40sp"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/buttonIncrementer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/bouton_plus" />
+        android:text="@string/bouton_plus"
+        app:layout_constraintTop_toBottomOf="@id/textViewCompteur"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:backgroundTint="#ED2F70"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/buttonDecrementer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bouton_moins"
-        android:layout_marginTop="10dp"/>
-
-    <Button
-        android:id="@+id/buttonReinitialiser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/bouton_reinitialiser" />
-
+        app:layout_constraintTop_toBottomOf="@id/textViewCompteur"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="#ED2F70"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/buttonPlus5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="+5" />
+        android:text="+5"
+        app:layout_constraintTop_toBottomOf="@id/buttonIncrementer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="70dp"
+        android:backgroundTint="#ED2F70"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/buttonMoins5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="-5" />
+        android:text="-5"
+        app:layout_constraintTop_toBottomOf="@id/buttonDecrementer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="#ED2F70"
+        android:textSize="24sp"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/buttonReinitialiser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bouton_reinitialiser"
+        app:layout_constraintTop_toBottomOf="@id/buttonPlus5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#4CAF50"
+        android:textSize="24sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

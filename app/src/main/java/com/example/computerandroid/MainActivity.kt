@@ -1,5 +1,6 @@
 package com.example.computerandroid
 
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -32,27 +33,38 @@ class MainActivity : AppCompatActivity() {
 
         buttonIncrementer.setOnClickListener {
             compteur++
-            textViewCompteur.text = compteur.toString()
+            actualiserCompteur(textViewCompteur)
         }
 
         buttonDecrementer.setOnClickListener {
             compteur--
-            textViewCompteur.text = compteur.toString()
+            actualiserCompteur(textViewCompteur)
         }
 
         buttonPlus5.setOnClickListener {
             compteur += 5
-            textViewCompteur.text = compteur.toString()
+            actualiserCompteur(textViewCompteur)
         }
 
         buttonMoins5.setOnClickListener {
             compteur -= 5
-            textViewCompteur.text = compteur.toString()
+            actualiserCompteur(textViewCompteur)
         }
 
         buttonReinitialiser.setOnClickListener {
             compteur = 0
-            textViewCompteur.text = compteur.toString()
+            actualiserCompteur(textViewCompteur)
+        }
+    }
+    private fun actualiserCompteur(textViewCompteur: TextView) {
+
+        textViewCompteur.text = compteur.toString()
+        if (compteur > 0) {
+            textViewCompteur.setTextColor(Color.GREEN)
+        } else if (compteur < 0) {
+            textViewCompteur.setTextColor(Color.RED)
+        } else {
+            textViewCompteur.setTextColor(Color.BLACK)
         }
     }
 }
